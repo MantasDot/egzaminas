@@ -27,11 +27,10 @@ function Top({ sort, booksCount, avgPrice, }) {
             <div className="col">
               <div className="card m-3">
                 <div className="card-body">
-                  <h5 className="card-tittle">Rušiavimas</h5>
+                  <h5 className="card-tittle">Rūšiavimas</h5>
                   <h6>Bendras knygų kiekis:{booksCount} </h6>
                   {avgPrice.map((avg) => (
-                    <h6 style={{ color: "gray" }} key={avg.price}>
-                      {avg.price}: {avg.count}
+                    <h6 style={{ color: "gray" }} key={avg.price}> Kainų vidurkis : {avg.price} {avg.count} Eur.
                     </h6>
                   ))}
                 </div>
