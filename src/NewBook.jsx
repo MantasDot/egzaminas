@@ -3,7 +3,7 @@ import { useState } from "react";
 function NewBook({ addBook }) {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
-  const [discountPrice, setDiscountPrice] = useState("");
+  const [discount_price, setDiscountPrice] = useState("");
   const [sale, setSale] = useState("");
 
   const control = (e, what) => {
@@ -27,7 +27,7 @@ function NewBook({ addBook }) {
     addBook({
       title: title,
       price: price,
-      discountPrice: discountPrice,
+      discount_price: discount_price,
       sale: sale,
     });
     setTitle("");
@@ -74,7 +74,7 @@ function NewBook({ addBook }) {
                     type="text"
                     className="form-control"
                     onChange={(e) => control(e, "discount_price")}
-                    value={discountPrice}
+                    value={discount_price}
                   />
                   <small className="form-text text-muted">
                     Enter book discounted price
