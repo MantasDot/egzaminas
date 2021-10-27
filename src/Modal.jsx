@@ -4,7 +4,7 @@ function Modal({ id, book, editBook, hideModal }) {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [sale, setSale] = useState("");
-  const [discountPrice, setDiscountPrice] = useState("");
+  const [discount_price, setDiscountPrice] = useState("");
 
   useEffect(() => {
     setTitle(book.title);
@@ -35,7 +35,7 @@ function Modal({ id, book, editBook, hideModal }) {
       title: title,
       price: price,
       sale: sale,
-      discountPrice: discountPrice
+      discount_price: discount_price
     });
     hideModal();
     setTitle("");
@@ -86,7 +86,7 @@ function Modal({ id, book, editBook, hideModal }) {
                     type="text"
                     className="form-control"
                     onChange={(e) => control(e, "discount_price")}
-                    value={discountPrice}
+                    value={discount_price}
                   />
                   <small className="form-text text-muted">
                     Edit discount price
